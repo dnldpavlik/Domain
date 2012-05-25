@@ -51,5 +51,10 @@ namespace DonPavlik.Domain.Model
 			get;
 			private set;
 		}
+
+		/// <summary>
+		/// Gets the time line for this person
+		/// </summary>
+		public ITimeLine TimeLine { get; private set; }
 	}
 }

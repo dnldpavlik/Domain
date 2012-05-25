@@ -15,58 +15,16 @@ namespace DonPavlik.Domain.DomainUnitTests
 	public class PersonTest
 	{
 		/// <summary>
-		///A test for Person Constructor
-		///</summary>
-		[TestMethod()]
-		public void PersonConstructorTest()
+		/// Tests that an initialized person doesn't have a time line
+		/// set
+		/// </summary>
+		[TestMethod]
+		public void InitializedPersonHasNullTimeLine()
 		{
-			Person target = new Person();
-			Assert.Inconclusive("TODO: Implement code to verify target");
+			Person person = new Person();
+
+			Assert.IsNull(person.TimeLine);
 		}
 
-		/// <summary>
-		///A test for DateOfBirth
-		///</summary>
-		[TestMethod()]
-		public void DateOfBirthTest()
-		{
-			Person target = new Person(); // TODO: Initialize to an appropriate value
-			DateTime expected = new DateTime(); // TODO: Initialize to an appropriate value
-			DateTime actual;
-			target.DateOfBirth = expected;
-			actual = target.DateOfBirth;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
-		}
-
-		/// <summary>
-		///A test for DateOfDeath
-		///</summary>
-		[TestMethod()]
-		public void DateOfDeathTest()
-		{
-			Person target = new Person(); // TODO: Initialize to an appropriate value
-			Nullable<DateTime> expected = new Nullable<DateTime>(); // TODO: Initialize to an appropriate value
-			Nullable<DateTime> actual;
-			target.DateOfDeath = expected;
-			actual = target.DateOfDeath;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
-		}
-
-		/// <summary>
-		///A test for Gender
-		///</summary>
-		[TestMethod()]
-		public void GenderTest()
-		{
-			Person target = new Person(); // TODO: Initialize to an appropriate value
-			string expected = string.Empty; // TODO: Initialize to an appropriate value
-			string actual;
-			target.Gender = expected;
-			actual = target.Gender;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
-		}
 	}
 }

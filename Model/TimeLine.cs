@@ -12,7 +12,7 @@ namespace DonPavlik.Domain.Model
 	/// <summary>
 	/// Time Line Class definition for working with Time Lines
 	/// </summary>
-	public class TimeLine
+	public class TimeLine : ITimeLine
 	{
 		/// <summary>
 		/// Initializes a new instance of the TimeLine Class
