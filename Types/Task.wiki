@@ -1,0 +1,7 @@
+= Task =
+
+Purpose
+To define the interface of how one would deal with tasks.  
+
+Task Description : The description of the task that has been identified to be completed
+
