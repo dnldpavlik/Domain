@@ -1,0 +1,27 @@
+= Domain Project =
+A project with dealing with:
+ * People
+   - Person      : Deal with general attributes of a person
+   - Anthroponym : Deal with a persons name
+ * Tasks
+
+ * Message
+   - Have marked down version of the message body.
+   - Have all meta data defined in the meta data fields
+   - Have contacts linked to contact wiki entries
+   - Be able to b linked to anything in wiki.
+   - Based on message type (Forward,Reply, Task, etc...) have the appropriate part of the message body returned in to the main message thread, like that of Google Wave.
+   - Message repo can get messages by subject line. Is this guaranteed to be unique? No, but it is a start, and when a message conflict like the occurs will just have to deal with a way of making it unique.
+
+== Interfaces ==
+[[Interfaces/IAnthroponym|IAnthroponym]] : Anthroponym interface for dealing with a persons name
+[[Interfaces/IPerson|IPerson]] : Person interface for dealing with people
+[[Interfaces/IProject|IProject]] : Project Interface definition for dealing with projects
+[[Interfaces/ITask|ITask]] : Task Interface definition for dealing with tasks
+
+
+== Types ==
+[[Types/Anthroponym|Anthroponym]] : Anthroponym class for dealing with a persons name, inherits from IAnthroponym
+[[Types/Person|Person]] : Person class for dealing with people
+[[Types/Task|Task]] : Task definition for dealing with tasks
+

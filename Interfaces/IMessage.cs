@@ -7,6 +7,7 @@ namespace DonPavlik.Domain.Interfaces
 	using System.Linq;
 	using System.Text;
 	using System.Threading.Tasks;
+	using DonPavlik.Domain.Interfaces.Roles;
 
 	public interface IMessage
 	{
@@ -24,5 +25,26 @@ namespace DonPavlik.Domain.Interfaces
 		/// Gets or sets the sent date time of the message
 		/// </summary>
 		DateTime Sent { get; set; }
+
+		/// <summary>
+		/// Gets or sets the Originator of the message. The 
+		/// person who sent the message.
+		/// </summary>
+		IContact From { get; set; }
+
+		/// <summary>
+		/// Gets the collection of tos for the message.
+		/// </summary>
+		ICollection<IContact> Tos { get; }
+
+		/// <summary>
+		/// Gets the collection of Ccs for the message.
+		/// </summary>
+		ICollection<IContact> Ccs { get; }
+
+		/// <summary>
+		/// Gets the collection of Bccs for the message
+		/// </summary>
+		ICollection<IContact> Bccs { get; }
 	}
 }
