@@ -59,6 +59,7 @@
     <Compile Include="Model Tests\Roles\ContactTests.cs" />
     <Compile Include="Model Tests\TimeLineEntryTests.cs" />
     <Compile Include="Model Tests\TimeLineTests.cs" />
+    <Compile Include="Model Tests\AddressTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model Tests\TaskTest.cs" />
   </ItemGroup>

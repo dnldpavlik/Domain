@@ -17,7 +17,7 @@ namespace DonPavlik.Domain.Interfaces
 		/// <summary>
 		/// Gets or sets the date of birth
 		/// </summary>
-		DateTime DateOfBirth { get; set; }
+		DateTime? DateOfBirth { get; set; }
 
 		/// <summary>
 		/// Gets or sets the Gender for the person
@@ -33,5 +33,15 @@ namespace DonPavlik.Domain.Interfaces
 		/// Gest the List of name aliases for a person
 		/// </summary>
 		IDictionary<string, IAnthroponym> Aliases { get; }
+
+		/// <summary>
+		/// Gets the time line for this person
+		/// </summary>
+		ITimeLine TimeLine { get; }
+
+		/// <summary>
+		/// Gets or sets the Address for the person
+		/// </summary>
+		IAddress Address { get; set; }
 	}
 }

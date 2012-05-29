@@ -1,10 +1,9 @@
-﻿using DonPavlik.Domain.Model;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-
+﻿
 namespace DonPavlik.Domain.DomainUnitTests
 {
-    
+	using DonPavlik.Domain.Model;
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using System;
     
     /// <summary>
     ///This is a test class for AnthroponymTest and is intended
@@ -13,152 +12,151 @@ namespace DonPavlik.Domain.DomainUnitTests
 	[TestClass()]
 	public class AnthroponymTest
 	{
-
-
-		private TestContext testContextInstance;
-
 		/// <summary>
-		///Gets or sets the test context which provides
-		///information about and functionality for the current test run.
-		///</summary>
-		public TestContext TestContext
+		/// Tests an anthroponym given name is empty
+		/// </summary>
+		[TestMethod]
+		public void InitializedAnthroponymsGivenNameIsEmpty()
 		{
-			get
-			{
-				return testContextInstance;
-			}
-			set
-			{
-				testContextInstance = value;
-			}
-		}
+			Anthroponym anthroponym = new Anthroponym();
 
-		#region Additional test attributes
-		// 
-		//You can use the following additional attributes as you write your tests:
-		//
-		//Use ClassInitialize to run code before running the first test in the class
-		//[ClassInitialize()]
-		//public static void MyClassInitialize(TestContext testContext)
-		//{
-		//}
-		//
-		//Use ClassCleanup to run code after all tests in a class have run
-		//[ClassCleanup()]
-		//public static void MyClassCleanup()
-		//{
-		//}
-		//
-		//Use TestInitialize to run code before running each test
-		//[TestInitialize()]
-		//public void MyTestInitialize()
-		//{
-		//}
-		//
-		//Use TestCleanup to run code after each test has run
-		//[TestCleanup()]
-		//public void MyTestCleanup()
-		//{
-		//}
-		//
-		#endregion
-
-
-		/// <summary>
-		///A test for Anthroponym Constructor
-		///</summary>
-		[TestMethod()]
-		public void AnthroponymConstructorTest()
-		{
-			Anthroponym target = new Anthroponym();
-			Assert.Inconclusive("TODO: Implement code to verify target");
+			Assert.AreEqual(string.Empty, anthroponym.Given);
 		}
 
 		/// <summary>
-		///A test for FullName
-		///</summary>
-		[TestMethod()]
-		public void FullNameTest()
+		/// Tests an anthroponym's Middle name is empty
+		/// </summary>
+		[TestMethod]
+		public void InitializedAnthropymnsMiddleIsEmpty()
 		{
-			Anthroponym target = new Anthroponym(); // TODO: Initialize to an appropriate value
-			string actual;
-			actual = target.FullName;
-			Assert.Inconclusive("Verify the correctness of this test method.");
+			Anthroponym anthroponym = new Anthroponym();
+
+			Assert.AreEqual(string.Empty, anthroponym.Middle);
 		}
 
 		/// <summary>
-		///A test for Given
-		///</summary>
-		[TestMethod()]
-		public void GivenTest()
+		/// Tests an anthroponym's Surname name is empty
+		/// </summary>
+		[TestMethod]
+		public void InitializedAnthropymnsSurnameIsEmpty()
 		{
-			Anthroponym target = new Anthroponym(); // TODO: Initialize to an appropriate value
-			string expected = string.Empty; // TODO: Initialize to an appropriate value
-			string actual;
-			target.Given = expected;
-			actual = target.Given;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
+			Anthroponym anthroponym = new Anthroponym();
+
+			Assert.AreEqual(string.Empty, anthroponym.Surname);
 		}
 
 		/// <summary>
-		///A test for Middle
-		///</summary>
-		[TestMethod()]
-		public void MiddleTest()
+		/// Tests an anthroponym's Suffix name is empty
+		/// </summary>
+		[TestMethod]
+		public void InitializedAnthropymnsSuffixIsEmpty()
 		{
-			Anthroponym target = new Anthroponym(); // TODO: Initialize to an appropriate value
-			string expected = string.Empty; // TODO: Initialize to an appropriate value
-			string actual;
-			target.Middle = expected;
-			actual = target.Middle;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
+			Anthroponym anthroponym = new Anthroponym();
+
+			Assert.AreEqual(string.Empty, anthroponym.Suffix);
 		}
 
 		/// <summary>
-		///A test for Prefix
-		///</summary>
-		[TestMethod()]
-		public void PrefixTest()
+		/// Tests an anthroponym's Prefix name is empty
+		/// </summary>
+		[TestMethod]
+		public void InitializedAnthropymnsPrefixIsEmpty()
 		{
-			Anthroponym target = new Anthroponym(); // TODO: Initialize to an appropriate value
-			string expected = string.Empty; // TODO: Initialize to an appropriate value
-			string actual;
-			target.Prefix = expected;
-			actual = target.Prefix;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
+			Anthroponym anthroponym = new Anthroponym();
+
+			Assert.AreEqual(string.Empty, anthroponym.Prefix);
 		}
 
 		/// <summary>
-		///A test for Suffix
-		///</summary>
-		[TestMethod()]
-		public void SuffixTest()
+		/// Tests that when only a given name is set that full name 
+		/// is the same as the given name
+		/// </summary>
+		[TestMethod]
+		public void FullNameReturnsGiven()
 		{
-			Anthroponym target = new Anthroponym(); // TODO: Initialize to an appropriate value
-			string expected = string.Empty; // TODO: Initialize to an appropriate value
-			string actual;
-			target.Suffix = expected;
-			actual = target.Suffix;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
+			Anthroponym anthroponym = new Anthroponym();
+			anthroponym.Given = "John";
+
+			Assert.AreEqual(anthroponym.Given, anthroponym.FullName);
 		}
 
 		/// <summary>
-		///A test for Surname
-		///</summary>
-		[TestMethod()]
-		public void SurnameTest()
+		/// Tests that when Given and Surname are set the full name
+		/// is the combination of the two.
+		/// </summary>
+		[TestMethod]
+		public void FullNameReturnGivenWithSurname()
 		{
-			Anthroponym target = new Anthroponym(); // TODO: Initialize to an appropriate value
-			string expected = string.Empty; // TODO: Initialize to an appropriate value
-			string actual;
-			target.Surname = expected;
-			actual = target.Surname;
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("Verify the correctness of this test method.");
+			Anthroponym anthroponym = new Anthroponym();
+			anthroponym.Given = "John";
+			anthroponym.Surname = "Smith";
+
+			Assert.AreEqual("John Smith", anthroponym.FullName);
+		}
+
+		/// <summary>
+		/// Tests when a Given, Middle and Surname are set the full
+		/// name is the combination of all three
+		/// </summary>
+		[TestMethod]
+		public void FullNameReturnGivenMiddleAndSurname()
+		{
+			Anthroponym anthroponym = new Anthroponym();
+			anthroponym.Given = "John";
+			anthroponym.Middle = "Que";
+			anthroponym.Surname = "Smith";
+
+			Assert.AreEqual("John Que Smith", anthroponym.FullName);
+		}
+
+		/// <summary>
+		/// Test when a Prefix, Given, Middle and Surname are set
+		/// the full name is combination of all four
+		/// </summary>
+		[TestMethod]
+		public void FullNameReturnPrefixGivenMiddleSurname()
+		{
+			Anthroponym anthroponym = new Anthroponym();
+			anthroponym.Prefix = "Mr.";
+			anthroponym.Given = "John";
+			anthroponym.Middle = "Que";
+			anthroponym.Surname = "Smith";
+
+			Assert.AreEqual("Mr. John Que Smith", anthroponym.FullName);
+		}
+
+		/// <summary>
+		/// Test when a Prefix, Given, Middle, Surname and Suffix
+		/// are set the full name is the combination of them all
+		/// </summary>
+		[TestMethod]
+		public void FullNamePrefixGivenMiddleSurnameSuffix()
+		{
+			Anthroponym anthroponym = new Anthroponym();
+			anthroponym.Prefix = "Mr.";
+			anthroponym.Given = "John";
+			anthroponym.Middle = "Que";
+			anthroponym.Surname = "Smith";
+			anthroponym.Suffix = "Jr.";
+
+			Assert.AreEqual("Mr. John Que Smith Jr.", anthroponym.FullName);
+		}
+
+		/// <summary>
+		/// Test when a Middle and Surname are set, the full name 
+		/// is the combination of the two
+		/// </summary>
+		[TestMethod]
+		public void FullNameMiddleSurname()
+		{
+			Anthroponym anthroponym = new Anthroponym();
+			anthroponym.Prefix = "Mr.";
+			anthroponym.Given = "John";
+			anthroponym.Middle = "Que";
+			anthroponym.Surname = "Smith";
+			anthroponym.Suffix = "Jr.";
+
+			Assert.AreEqual("Mr. John Que Smith Jr.", anthroponym.FullName);
 		}
 	}
 }

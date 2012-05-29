@@ -15,21 +15,6 @@ namespace DonPavlik.Domain.Interfaces
 		bool Flagged { get; set; }
 
 		/// <summary>
-		/// Gets a value indicating whether a task has children tasks
-		/// </summary>
-		bool HasTasks { get; }
-
-		/// <summary>
-		/// Gets a value indicating whether this task has a note
-		/// </summary>
-		bool HasNote { get; }
-
-		/// <summary>
-		/// Gets a value indicating whether this task has a summary
-		/// </summary>
-		bool HasSummary { get; }
-
-		/// <summary>
 		/// Gets or sets whether a task is completed
 		/// </summary>
 		bool IsCompleted { get; set; }		

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enumerations\TransactionType.cs" />
+    <Compile Include="Interfaces\IAddress.cs" />
     <Compile Include="Interfaces\IAnthropnym.cs" />
     <Compile Include="Interfaces\IMessage.cs" />
     <Compile Include="Interfaces\IPage.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Interfaces\ITransaction.cs" />
     <Compile Include="Interfaces\Roles\IContact.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Anthropnym.cs" />
     <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Interfaces\ILine.cs" />

@@ -16,13 +16,13 @@ namespace DonPavlik.Domain.Model
 		public Person()
 		{
 			this.Aliases = new Dictionary<string, IAnthroponym>();
-			this.PrimaryName = new Anthroponym();
+			this.Gender  = string.Empty;
 		}
 
 		/// <summary>
 		/// Gets or sets the Date of Birth for the person
 		/// </summary>
-		public DateTime DateOfBirth { get; set; }
+		public DateTime? DateOfBirth { get; set; }
 
 		/// <summary>
 		/// Gets or sets the Date of death for the person
@@ -56,5 +56,10 @@ namespace DonPavlik.Domain.Model
 		/// Gets the time line for this person
 		/// </summary>
 		public ITimeLine TimeLine { get; private set; }
+
+		/// <summary>
+		/// Gets or sets the Address for the person
+		/// </summary>
+		public IAddress Address { get; set; }
 	}
 }
