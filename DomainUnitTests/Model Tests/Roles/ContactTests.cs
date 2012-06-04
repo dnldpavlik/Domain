@@ -21,5 +21,19 @@ namespace DonPavlik.Domain.DomainUnitTests.Model_Tests.Roles
 
 			Assert.AreEqual(string.Empty, contact.Email);
 		}
+
+		/// <summary>
+		/// Tests that a contacts has the same address as a person
+		/// </summary>
+		[TestMethod]
+		public void ContactsAddressSameAsPerson()
+		{
+			IPerson person = new Person();
+			person.Address = new Address();
+			person.Address.City = "Somewhere";
+			Contact contact = new Contact(person);
+
+			Assert.AreEqual(person.Address.City, contact.Address.City);
+		}
 	}
 }
