@@ -107,5 +107,20 @@ namespace DonPavlik.Domain.Model.Roles
 				this._person.Address = value;
 			}
 		}
+
+		/// <summary>
+		/// Gets or sets the image for this contact
+		/// </summary>
+		public string Image
+		{
+			get
+			{
+				return this._person.Image;
+			}
+			set
+			{
+				this._person.Image = value;
+			}
+		}
 	}
 }

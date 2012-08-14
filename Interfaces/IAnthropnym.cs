@@ -10,7 +10,7 @@ namespace DonPavlik.Domain.Interfaces
 		/// <summary>
 		/// Gets the full name
 		/// </summary>
-		string FullName { get; }
+		string FullName { get; set; }
 
 		/// <summary>
 		/// Gets or sets the Given name, also known as first name

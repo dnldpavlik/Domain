@@ -16,6 +16,7 @@ namespace DonPavlik.Domain.Model
 		public Person()
 		{
 			this.Aliases = new Dictionary<string, IAnthroponym>();
+			this.PrimaryName = new Anthroponym();
 			this.Gender  = string.Empty;
 		}
 
@@ -61,5 +62,10 @@ namespace DonPavlik.Domain.Model
 		/// Gets or sets the Address for the person
 		/// </summary>
 		public IAddress Address { get; set; }
+
+		/// <summary>
+		/// Gets or sets the image for this person
+		/// </summary>
+		public string Image { get; set; }
 	}
 }

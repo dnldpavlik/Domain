@@ -57,6 +57,26 @@ namespace DonPavlik.Domain.Model
 
 				return fullName.Trim();
 			}
+
+			set
+			{
+				if (value != null)
+				{
+					if (value.Contains(" "))
+					{
+						string[] nameParts = value.Split(' ');
+						if (nameParts.Length == 2)
+						{
+							this.Given = nameParts[0];
+							this.Surname = nameParts[1];
+						}
+					}
+					else
+					{
+						this.Given = value;
+					}
+				}
+			}
 		}
 
 		/// <summary>

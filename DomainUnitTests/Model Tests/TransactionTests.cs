@@ -4,83 +4,82 @@ namespace DonPavlik.Domain.DomainUnitTests.Model_Tests
 	using System;
 	using DonPavlik.Domain.Enumerations;
 	using DonPavlik.Domain.Model;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using Xunit;
 
 	/// <summary>
 	/// Tests for the transaction model class
 	/// </summary>
-	[TestClass]
 	public class TransactionTests
 	{
 		/// <summary>
 		/// Tests that an initialized transaction has an 
 		/// empty description
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTransactionDescriptionEmpty()
 		{
 			Transaction transaction = new Transaction();
 
-			Assert.AreEqual(string.Empty, transaction.Description);
+			Assert.Equal(string.Empty, transaction.Description);
 		}
 
 		/// <summary>
 		/// Tests that an initialized transaction has an 
 		/// amount of zero
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTransactionAmountZero()
 		{
 			Transaction transaction = new Transaction();
 
-			Assert.AreEqual(transaction.Amount, 0.0);
+			Assert.Equal(transaction.Amount, 0.0);
 		}
 
 		/// <summary>
 		/// Tests that an initialized transaction has its date
 		/// value as the min date time value
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTransactionDateIsDateMin()
 		{
 			Transaction transaction = new Transaction();
 
-			Assert.AreEqual(transaction.Date, DateTime.MinValue);
+			Assert.Equal(transaction.Date, DateTime.MinValue);
 		}
 
 		/// <summary>
 		/// Tests that an initialized transaction has its 
 		/// transaction type set to withdrawal
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTransactionTransactionTypeNotSet()
 		{
 			Transaction transaction = new Transaction();
 
-			Assert.AreEqual(transaction.TransactionType, TransactionTypes.Withdrawal);
+			Assert.Equal(transaction.TransactionType, TransactionTypes.Withdrawal);
 		}
 
 		/// <summary>
 		/// Tests that an initialized transaction's tag collection
 		/// has a count/length of zero
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTransactionTagsLengthZero()
 		{
 			Transaction transaction = new Transaction();
 
-			Assert.AreEqual(0, transaction.Tags.Count);
+			Assert.Equal(0, transaction.Tags.Count);
 		}
 		
 		/// <summary>
 		/// Tests that an initialized transaction's account is null 
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTransactionHasNullAccount()
 		{
 			Transaction transaction = new Transaction();
 
-			Assert.IsNull(transaction.Account);
+			Assert.Null(transaction.Account);
 		}
 	}
 }

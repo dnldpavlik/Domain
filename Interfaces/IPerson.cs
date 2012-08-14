@@ -43,5 +43,10 @@ namespace DonPavlik.Domain.Interfaces
 		/// Gets or sets the Address for the person
 		/// </summary>
 		IAddress Address { get; set; }
+
+		/// <summary>
+		/// Gets or sets the image for this person
+		/// </summary>
+		string Image { get; set; }
 	}
 }

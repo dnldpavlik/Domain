@@ -3,45 +3,44 @@ namespace DonPavlik.Domain.DomainUnitTests.Model_Tests
 {
 	using System;
 	using DonPavlik.Domain.Model;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using Xunit;
 
-	[TestClass]
 	public class TimeLineEntryTests
 	{
 		/// <summary>
 		/// Tests that an initialized Time Line Entry has an
 		/// empty Title
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTimeLineEntryTitleIsEmpty()
 		{
 			TimeLineEntry timeLineEntry = new TimeLineEntry();
 
-			Assert.AreEqual(string.Empty, timeLineEntry.Title);
+			Assert.Equal(string.Empty, timeLineEntry.Title);
 		}
 
 		/// <summary>
 		/// Tests that an initialized Time Line Entry's Date Time 
 		/// is the minimum date time value.
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTimeLineEntryDateTimeIsMinValue()
 		{
 			TimeLineEntry timeLineEntry = new TimeLineEntry();
 
-			Assert.AreEqual(DateTime.MinValue, timeLineEntry.DateTime);
+			Assert.Equal(DateTime.MinValue, timeLineEntry.DateTime);
 		}
 
 		/// <summary>
 		/// Tests that an inialized time line entry's entry collection
 		/// is zero
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void InitializedTimeLineEntryEntryIsZero()
 		{
 			TimeLineEntry timeLineEntry = new TimeLineEntry();
 
-			Assert.AreEqual(0, timeLineEntry.Entry.Count);
+			Assert.Equal(0, timeLineEntry.Entry.Count);
 		}
 	}
 }

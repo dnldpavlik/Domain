@@ -12,6 +12,10 @@ A project with dealing with:
    - Be able to b linked to anything in wiki.
    - Based on message type (Forward,Reply, Task, etc...) have the appropriate part of the message body returned in to the main message thread, like that of Google Wave.
    - Message repo can get messages by subject line. Is this guaranteed to be unique? No, but it is a start, and when a message conflict like the occurs will just have to deal with a way of making it unique.
+ * Organization model object representing an organization
+   - Name
+   - Members
+   - Address
 
 == Interfaces ==
 [[Interfaces/IAnthroponym|IAnthroponym]] : Anthroponym interface for dealing with a persons name

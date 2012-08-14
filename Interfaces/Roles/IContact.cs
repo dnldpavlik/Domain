@@ -10,7 +10,7 @@ namespace DonPavlik.Domain.Interfaces.Roles
 	/// <summary>
 	/// Contact interface definition
 	/// </summary>
-	public interface IContact
+	public interface IContact : IPerson
 	{
 		/// <summary>
 		/// Gets or sets the email for the contact
